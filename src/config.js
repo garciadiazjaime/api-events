@@ -12,13 +12,13 @@ const config = convict({
     doc: 'The IP address to bind.',
     format: 'ipaddress',
     default: '0.0.0.0',
-    env: 'NODE_IP',
+    env: 'IP',
   },
   port: {
     doc: 'The port to bind.',
     format: 'port',
     default: 3030,
-    env: 'NODE_PORT',
+    env: 'PORT',
   },
   db: {
     url: {

@@ -1,24 +1,14 @@
-News API
-----
+# Events API
 
-[![Build Status](https://travis-ci.org/garciadiazjaime/api-news.svg)](https://travis-ci.org/garciadiazjaime/api-news)
+[![Build Status](https://travis-ci.org/garciadiazjaime/api-events.svg)](https://travis-ci.org/garciadiazjaime/api-events)
 
-Run project:
-----
-a) install all packages:
+## Run project:
+a) Install Dependencies
 
 `yarn`
 
-b) run scrpper
+b) Start Server
 
-`npm start`
+`yarn dev`
 
-
-Login rch
-`rhc -l setup email`
-
-Setting up Envs
-`rhc env set NPM_CONFIG_PRODUCTION=true -a app`
-
-Checking Envs
-`rhc env list -a app`
+By default server will run on http://localhost:3030

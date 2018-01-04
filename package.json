@@ -4,10 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "babel": "babel src -d build",
-    "build": "yarn babel && yarn docker",
+    "build": "babel src -d build",
     "dev": "nodemon build/server",
-    "start": "node ./build/server"
+    "start": "node ./build/server",
+    "docker:build": "yarn build && docker build -t garciadiazjaime/api-events .",
+    "docker:run": "docker run -d -p 49330:3030 --name events garciadiazjaime/api-events",
+    "docker:push": "docker push garciadiazjaime/api-events",
+    "docker:pull": "docker pull garciadiazjaime/api-events"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
