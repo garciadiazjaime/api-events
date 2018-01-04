@@ -1,0 +1,26 @@
+{
+  "name": "api-events",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "babel": "babel src -d build",
+    "build": "yarn babel && yarn docker",
+    "dev": "nodemon build/server",
+    "start": "node ./build/server"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "convict": "^4.0.2",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.12.3",
+    "mongoose": "^5.0.0-rc1",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "nodemon": "^1.14.7"
+  }
+}
