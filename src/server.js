@@ -22,7 +22,7 @@ const startApp = confg =>
 
 openDatabase(props.dbUrl)
   .then(() => {
-    startApp(props)
     app.use('/', routes)
+    startApp(props)
   })
   .catch(console.log)

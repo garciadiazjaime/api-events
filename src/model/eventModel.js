@@ -10,6 +10,6 @@ const EventSchema = new mongoose.Schema({
   date: String,
 });
 
-const GrpnEvent = mongoose.model('event', EventSchema);
+const EventModel = mongoose.model('event', EventSchema);
 
-export default GrpnEvent;
+export default EventModel;
