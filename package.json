@@ -4,10 +4,10 @@
   "main": "./build/routes",
   "license": "MIT",
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "babel src -d dist",
     "dev": "nodemon build/server",
     "start": "node ./build/server",
-    "postinstall": "postinstall-build lib",
+    "postinstall": "postinstall-build dist",
     "docker:build": "yarn build && docker build -t garciadiazjaime/api-events .",
     "docker:run": "docker run -d -p 49330:3030 --name events garciadiazjaime/api-events",
     "docker:push": "docker push garciadiazjaime/api-events",
