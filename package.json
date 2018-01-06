@@ -1,7 +1,7 @@
 {
   "name": "api-events",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/routes.js",
   "license": "MIT",
   "scripts": {
     "build": "babel src -d dist",
