@@ -4,10 +4,10 @@
   "main": "./build/routes",
   "license": "MIT",
   "scripts": {
-    "build": "babel src -d build",
+    "build": "babel src -d lib",
     "dev": "nodemon build/server",
     "start": "node ./build/server",
-    "postinstall": "npm run build",
+    "postinstall": "postinstall-build lib"
     "docker:build": "yarn build && docker build -t garciadiazjaime/api-events .",
     "docker:run": "docker run -d -p 49330:3030 --name events garciadiazjaime/api-events",
     "docker:push": "docker push garciadiazjaime/api-events",
@@ -20,7 +20,8 @@
     "express-graphql": "^0.6.11",
     "graphql": "^0.12.3",
     "mongoose": "^5.0.0-rc1",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "postinstall-build": "^5.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
