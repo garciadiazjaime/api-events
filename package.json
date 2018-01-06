@@ -1,12 +1,13 @@
 {
   "name": "api-events",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./build/routes",
   "license": "MIT",
   "scripts": {
     "build": "babel src -d build",
     "dev": "nodemon build/server",
     "start": "node ./build/server",
+    "postinstall": "npm run build",
     "docker:build": "yarn build && docker build -t garciadiazjaime/api-events .",
     "docker:run": "docker run -d -p 49330:3030 --name events garciadiazjaime/api-events",
     "docker:push": "docker push garciadiazjaime/api-events",
