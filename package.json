@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src -d dist",
-    "dev": "nodemon build/server",
-    "start": "node ./build/server",
+    "dev": "nodemon dist/server",
+    "start": "node ./dist/server",
     "postinstall": "postinstall-build dist",
     "docker:build": "yarn build && docker build -t garciadiazjaime/api-events .",
     "docker:run": "docker run -d -p 49330:3030 --name events garciadiazjaime/api-events",

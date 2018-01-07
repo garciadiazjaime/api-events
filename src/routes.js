@@ -25,6 +25,12 @@ router.post('/events', (req, res) => {
         data: results.length
       })
     })
+    .catch(error => {
+      res.send({
+        status: false,
+        error: error.message
+      })
+    })
 })
 
 router.get('/weather', graphqlHTTP(() => ({
