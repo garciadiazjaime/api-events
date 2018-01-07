@@ -8,6 +8,10 @@ const EventSchema = new mongoose.Schema({
   image: String,
   price: String,
   date: String,
+  category: String,
+  place: String,
+  updated: { type: Date, default: Date.now },
+  created: { type: Date, default: Date.now }
 });
 
 const EventModel = mongoose.model('event', EventSchema);
