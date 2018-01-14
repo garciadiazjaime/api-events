@@ -39,6 +39,10 @@ const eventType = new GraphQLObjectType({
       type: GraphQLString,
       description: 'Events date',
     },
+    rawDate: {
+      type: GraphQLString,
+      description: 'Events original date value'
+    }
   }),
 });
 
@@ -57,7 +61,7 @@ const eventSchema = new GraphQLSchema({
         resolve: (root, { uuid }) => {
           const foundEvents = new Promise((resolve, reject) => {
             const query = uuid ? { uuid } : {};
-            eventMongo.find(query, (error, events) => (error ? reject(error) : resolve(events)));
+            eventMongo.find(query, (error, events) => (error ? reject(error) : resolve(events))).sort('-date');
           });
           return foundEvents;
         },

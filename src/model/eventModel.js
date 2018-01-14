@@ -7,8 +7,9 @@ const EventSchema = new mongoose.Schema({
   url: String,
   image: String,
   price: String,
-  date: String,
-  category: String,
+  date: Date,
+  rawDate: String,
+  category: Number,
   place: String,
   updated: { type: Date, default: Date.now },
   created: { type: Date, default: Date.now }
