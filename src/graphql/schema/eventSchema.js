@@ -5,7 +5,7 @@ import {
   GraphQLList,
 } from 'graphql/type';
 
-import eventMongo from '../../model/eventModel';
+import EventModel from '../../model/eventModel';
 
 const eventType = new GraphQLObjectType({
   name: 'event',
@@ -61,7 +61,7 @@ const eventSchema = new GraphQLSchema({
         resolve: (root, { uuid }) => {
           const foundEvents = new Promise((resolve, reject) => {
             const query = uuid ? { uuid } : {};
-            eventMongo.find(query, (error, events) => (error ? reject(error) : resolve(events))).sort('-date');
+            EventModel.find(query, (error, events) => (error ? reject(error) : resolve(events))).sort('-date');
           });
           return foundEvents;
         },
