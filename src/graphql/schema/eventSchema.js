@@ -1,11 +1,11 @@
-import {
+const {
   GraphQLObjectType,
   GraphQLSchema,
   GraphQLString,
   GraphQLList,
-} from 'graphql/type';
+} = require('graphql/type');
 
-import EventModel from '../../model/eventModel';
+const EventModel = require('../../model/eventModel');
 
 const eventType = new GraphQLObjectType({
   name: 'event',
@@ -70,4 +70,4 @@ const eventSchema = new GraphQLSchema({
   }),
 });
 
-export default eventSchema;
+module.exports = eventSchema;

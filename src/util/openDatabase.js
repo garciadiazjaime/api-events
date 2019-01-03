@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
-const openDatabase = dbUrl => mongoose.connect(dbUrl);
+const openDatabase = dbUrl => mongoose.connect(dbUrl, { useNewUrlParser: true });
 
-export default openDatabase;
+module.exports = openDatabase;

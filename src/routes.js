@@ -1,11 +1,11 @@
-import express from 'express'
-import mongoose from 'mongoose'
-import graphqlHTTP from 'express-graphql'
+const express = require('express')
+const mongoose = require('mongoose')
+const graphqlHTTP = require('express-graphql')
 
-import eventSchema from './graphql/schema/eventSchema'
-import weatherSchema from './graphql/schema/weatherSchema'
-import EventModel from './model/eventModel'
-import WeatherModel from './model/weatherModel'
+const eventSchema = require('./graphql/schema/eventSchema')
+const weatherSchema = require('./graphql/schema/weatherSchema')
+const EventModel = require('./model/eventModel')
+const WeatherModel = require('./model/weatherModel')
 
 mongoose.Promise = global.Promise
 
@@ -49,4 +49,4 @@ router.post('/weather', (req, res) => {
     })
 })
 
-export default router
+module.exports = router

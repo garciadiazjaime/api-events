@@ -1,13 +1,12 @@
 {
   "name": "mint-api-events",
   "version": "1.0.1",
-  "main": "./dist/routes.js",
+  "main": "./src/server.js",
   "license": "MIT",
   "scripts": {
-    "build": "babel src -d dist",
-    "dev": "nodemon dist/server",
-    "start": "node ./dist/server",
-    "docker:build": "yarn build && docker build -t garciadiazjaime/api-events .",
+    "dev": "nodemon ./src/server",
+    "start": "node ./src/server",
+    "docker:build": "docker build -t garciadiazjaime/api-events .",
     "docker:run": "docker run -d -p 49330:3030 --name events garciadiazjaime/api-events",
     "docker:push": "docker push garciadiazjaime/api-events",
     "docker:pull": "docker pull garciadiazjaime/api-events"
@@ -22,8 +21,6 @@
     "morgan": "^1.9.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "nodemon": "^1.14.7"
   }
 }

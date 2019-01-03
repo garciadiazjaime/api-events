@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const EventSchema = new mongoose.Schema({
   uuid: { type: String, unique: true },
@@ -17,4 +17,4 @@ const EventSchema = new mongoose.Schema({
 
 const EventModel = mongoose.model('event', EventSchema);
 
-export default EventModel;
+module.exports = EventModel;
